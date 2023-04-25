@@ -31,7 +31,7 @@ const TeamItem: React.FC<TeamItemProps> = ({
   return (
     <div className={styles.teamItem}>
       <div className={styles.imageBlock}>
-        <Image className={styles.brooklynLogo} src={logo} alt="BrooklynLogo" />
+        <Image className={styles.teamLogo} src={logo} alt="TeamLogo" />
         <Image
           className={styles.ballLogo}
           height={556}

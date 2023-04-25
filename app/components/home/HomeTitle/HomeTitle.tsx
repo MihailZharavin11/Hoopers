@@ -1,5 +1,5 @@
 "use client";
-import { Archivo } from "next/font/google";
+import { Archivo, Lato } from "next/font/google";
 import React from "react";
 import styles from "./homeTitle.module.scss";
 
@@ -13,13 +13,18 @@ const fontTitle = Archivo({
   subsets: ["latin"],
 });
 
+const fontText = Lato({
+  weight: "300",
+  subsets: ["latin"],
+});
+
 const HomeTitle: React.FC<HomeTitleProps> = ({ title, text }) => {
   return (
     <div className={styles.titleWrapper}>
       <h1 className={`${styles.title} ${fontTitle.className}`}>
         {title.toUpperCase()}
       </h1>
-      <p className={styles.text}>{text}</p>
+      <p className={`${styles.text} ${fontText.className}`}>{text}</p>
     </div>
   );
 };

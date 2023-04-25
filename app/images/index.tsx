@@ -13,17 +13,18 @@ import DeRozanItem from "./playersSection/DeRozan.svg";
 import HardenItem from "./playersSection/Harden.svg";
 import KobeItem from "./playersSection/Kobe.svg";
 import LebronItem from "./playersSection/Lebron.svg";
-import BrooklynLogo from "./teamSection/Brooklyn.svg";
-import ChicagoLogo from "./teamSection/Chicago.svg";
-import GoldenStateLogo from "./teamSection/GoldenState.svg";
-import HeatLogo from "./teamSection/Heat.svg";
-import LakersLogo from "./teamSection/Lakers.svg";
 import Ball from "./homeImage/ball.png";
 import BallLogo from "./gamesSection/BallLogo.svg";
 import ArrowLeft from "./gamesSection/ArrowLeft.svg";
 import ArrowRight from "./gamesSection/ArrowRight.svg";
 import ArrowLeftDisable from "./gamesSection/ArrowLeftDisable.svg";
 import ArrowRightDisable from "./gamesSection/ArrowRightDisable.svg";
+import ChicagoLogo from "../images/teamSection/Chicago.svg";
+import CelticsLogo from "../images/teamSection/BostonCeltics.svg";
+import MiamiLogo from "../images/teamSection/Miami.svg";
+import LakersLogo from "../images/teamSection/Lakers.svg";
+import GoldenStateLogo from "../images/teamSection/GoldenState.svg";
+import NetsLogo from "../images/teamSection/Nets.svg";
 
 export {
   Logo,
@@ -41,15 +42,16 @@ export {
   HardenItem,
   KobeItem,
   LebronItem,
-  BrooklynLogo,
-  ChicagoLogo,
-  GoldenStateLogo,
-  HeatLogo,
-  LakersLogo,
   Ball,
   BallLogo,
   ArrowLeft,
   ArrowRight,
   ArrowLeftDisable,
   ArrowRightDisable,
+  ChicagoLogo,
+  CelticsLogo,
+  MiamiLogo,
+  LakersLogo,
+  GoldenStateLogo,
+  NetsLogo,
 };

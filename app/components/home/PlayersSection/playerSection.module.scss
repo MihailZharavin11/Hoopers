@@ -5,16 +5,23 @@
   background-color: black;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .boxPlayersWrapper {
   display: flex;
   align-items: center;
   gap: 15px;
-  overflow: hidden;
-  height: 360px;
   margin-bottom: 100px;
-  margin-left: 70px;
+  margin-left: 50px;
+  height: 100%;
+  overflow: visible;
+  overflow-x: auto;
+
+  padding: 50px 20px;
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
   @media (max-width: $layout-breakpoint-large) {
     justify-content: flex-start;
     overflow-x: scroll;
