@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Roboto&display=swap");
+
+* {
+  font-size: 24px;
+  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+@font-face {
+  font-family: "Cyrvetica";
+  src: local("Cyrvetica"),
+    url("../../fonts/cyrveticav2extraoutline_normal.otf") format("truetype");
+  font-weight: bold;
+}

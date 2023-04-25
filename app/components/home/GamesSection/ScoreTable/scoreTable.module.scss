@@ -1,0 +1,45 @@
+@import "../../../../sass/abstracts/variables";
+
+.scoreTable {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 10px 20px;
+  min-width: 400px;
+
+  @media (max-width: $layout-breakpoint-medium) {
+    min-width: 350px;
+  }
+
+  @media (max-width: $layout-breakpoint-small) {
+    min-width: 280px;
+  }
+  @media (max-width: $layout-breakpoint-xsmall) {
+    justify-content: space-between;
+    min-width: 200px;
+  }
+}
+
+.infoTeam {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 50%;
+  color: #fff;
+  @media (max-width: $layout-breakpoint-small) {
+    gap: 0px;
+  }
+}
+
+.score {
+  @include adaptive-FS(21, 36);
+  font-weight: 600px;
+}
+
+.infoTeam:first-child {
+  margin-right: 50px;
+  @media (max-width: $layout-breakpoint-small) {
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,58 @@
+@import "../../../sass/abstracts/variables";
+
+.container {
+  height: calc(100vh - 90px);
+  width: 100vw;
+  position: fixed;
+  top: 90px;
+  right: 0;
+}
+
+.blur {
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(2px);
+  position: absolute;
+  z-index: -10;
+}
+
+.menuWrapper {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  @media (max-width: $layout-breakpoint-xxl) {
+    display: none;
+    overflow: auto;
+  }
+  @media (max-width: $layout-breakpoint-large) {
+    display: none;
+  }
+  @media (max-width: $layout-breakpoint-medium) {
+    display: none;
+  }
+  @media (max-width: $layout-breakpoint-small) {
+    display: block;
+  }
+}
+
+.listMenu {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  list-style-type: none;
+  background-color: black;
+  > li {
+    padding: 10px;
+    cursor: pointer;
+    font-family: "Cyrvetica";
+    font-style: normal;
+    font-weight: 400;
+    @include adaptive-FS(30, 60);
+  }
+}

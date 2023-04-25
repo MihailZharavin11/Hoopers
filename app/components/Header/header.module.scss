@@ -1,0 +1,29 @@
+@import "../../sass/abstracts/variables";
+.header {
+  height: 100px;
+  width: 100%;
+  padding-top: 39px;
+  padding: 39px 73px 0px;
+  z-index: 999;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  background-color: black;
+  color: white;
+  @media (max-width: $layout-breakpoint-medium) {
+  }
+  @media (max-width: $layout-breakpoint-small) {
+    padding: 20px 40px;
+  }
+  @media (max-width: $layout-breakpoint-xsmall) {
+  }
+
+  .headerImg {
+    @media (max-width: $layout-breakpoint-small) {
+      width: 100px;
+    }
+    @media (max-width: $layout-breakpoint-xsmall) {
+      width: 80px;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import "../../../sass/abstracts/variables";
+
+.titleWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 45px 70px;
+  gap: 24px;
+  @media (max-width: $layout-breakpoint-small) {
+    padding: 10px 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+  }
+}
+
+.title {
+  @include adaptive-FS(30, 90);
+  line-height: 105px;
+  letter-spacing: 0.07em;
+  color: transparent;
+  -webkit-text-stroke: 2px #fff;
+  @media (max-width: $layout-breakpoint-small) {
+    margin-bottom: 10px;
+    line-height: 30px;
+  }
+}
+
+.text {
+  max-width: 325px;
+  font-style: normal;
+  font-weight: 400;
+  @include adaptive-FS(14, 24);
+  line-height: 28px;
+  text-align: start;
+  color: #ffffff;
+  @media (max-width: $layout-breakpoint-small) {
+    text-align: start;
+    line-height: 23px;
+  }
+}

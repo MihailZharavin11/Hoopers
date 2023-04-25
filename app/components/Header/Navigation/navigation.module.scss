@@ -1,0 +1,84 @@
+@import "../../../sass/abstracts/variables";
+
+.navigationWrapper {
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+.navigationList {
+  display: flex;
+  gap: 120px;
+
+  .linkNav {
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+    letter-spacing: 0.04em;
+  }
+
+  @media (max-width: $layout-breakpoint-large) {
+  }
+  @media (max-width: $layout-breakpoint-medium) {
+  }
+  @media (max-width: $layout-breakpoint-small) {
+    display: none;
+  }
+  @media (max-width: $layout-breakpoint-xsmall) {
+  }
+}
+
+.navigationBtn {
+  display: none;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+  @media (max-width: $layout-breakpoint-small) {
+    display: block;
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.navigationBtn span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  background-color: white;
+  height: 3px;
+  border-radius: 10%;
+  @media (max-width: $layout-breakpoint-small) {
+    width: 25px;
+  }
+}
+
+.navigationBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 30px;
+  background-color: white;
+  height: 3px;
+  border-radius: 10%;
+  @media (max-width: $layout-breakpoint-small) {
+    width: 25px;
+  }
+}
+
+.navigationBtn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 30px;
+  background-color: white;
+  height: 3px;
+  border-radius: 10%;
+  @media (max-width: $layout-breakpoint-small) {
+    width: 25px;
+  }
+}

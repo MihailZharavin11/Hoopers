@@ -1,0 +1,34 @@
+@import "../../../sass/abstracts/variables";
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .button {
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+    background: transparent;
+    color: white;
+    font-weight: 400;
+    @include adaptive-FS(14, 28);
+    line-height: 32px;
+    padding: 14px 35px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+      background: #ff6b00;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+    @media (max-width: layout-breakpoint-large) {
+    }
+    @media (max-width: layout-breakpoint-medium) {
+    }
+    @media (max-width: layout-breakpoint-small) {
+      padding: 8px 25px;
+    }
+    @media (max-width: layout-breakpoint-xsmall) {
+      padding: 5px 15px;
+    }
+  }
+}

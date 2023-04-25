@@ -1,0 +1,37 @@
+@import "../../../sass/abstracts/variables";
+
+.homeImageWrapper {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeTitle {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  .logoImage {
+    position: absolute;
+    right: 35px;
+    bottom: 40px;
+  }
+}
+
+.ballImage {
+  position: absolute;
+  top: -200px;
+  left: 0;
+}
+
+.title {
+  font-size: 250px;
+  color: white;
+  letter-spacing: 0.07em;
+  text-shadow: 0px 4.49699px 4.49699px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+  color: transparent;
+  -webkit-text-stroke: 4px white;
+}

@@ -1,0 +1,18 @@
+// Breakpoints
+$layout-breakpoint-xxl: 1920px;
+$layout-breakpoint-large: 1440px;
+$layout-breakpoint-medium: 960px;
+$layout-breakpoint-small: 768px;
+$layout-breakpoint-xsmall: 480px;
+
+//mixin
+
+$maxWidth: 1440;
+$minWidth: 320;
+
+@mixin adaptive-FS($minFS, $maxFS) {
+  font-size: calc(
+    #{$minFS}px + (#{$maxFS - $minFS}) * (100vw - #{$minWidth}px) /
+      (#{$maxWidth - $minWidth})
+  );
+}

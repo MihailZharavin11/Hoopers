@@ -1,0 +1,56 @@
+.teamItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1282px;
+  gap: 51px;
+  .imageBlock {
+    position: relative;
+    margin: 0 auto;
+    max-width: 926px;
+    min-width: 556px;
+    min-height: 556px;
+    border-radius: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 51px;
+    .brooklynLogo {
+      z-index: 10;
+    }
+    .ballLogo {
+      position: absolute;
+      z-index: 1;
+    }
+  }
+  .teamDescription {
+    position: relative;
+    text-align: center;
+    padding: 0px 100px;
+
+    .teamText {
+      max-width: 926px;
+      text-align: center;
+      color: white;
+      font-size: 24px;
+      line-height: 33px;
+      text-align: center;
+      letter-spacing: 0.04em;
+    }
+  }
+}
+
+.arrow {
+  cursor: pointer;
+}
+.arrowLeft {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.arrowRight {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

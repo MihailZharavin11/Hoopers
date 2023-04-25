@@ -1,0 +1,17 @@
+.teamBlock {
+  position: relative;
+  margin-bottom: 100px;
+  .previousTeam {
+    position: absolute;
+    top: 15%;
+    transform: translate(-40%) scale(0.9);
+    opacity: 0.78;
+  }
+  .nextTeam {
+    position: absolute;
+    top: 15%;
+    right: 0;
+    transform: translate(40%) scale(0.9);
+    opacity: 0.78;
+  }
+}
