@@ -10,7 +10,6 @@ import {
   GoldenStateLogo,
 } from "@/app/images";
 import TeamItem from "../TeamItem/TeamItem";
-import Image from "next/image";
 
 export interface Team {
   description: string;
