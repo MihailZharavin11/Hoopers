@@ -16,11 +16,13 @@ const PhotoSection = () => {
   const yVal = useTransform(scrollYProgress, [0, 1], ["0px", "-700px"]);
   return (
     <div className={styles.homeImageWrapper}>
+      <div className={styles.container}>
+        <motion.div className={styles.homeTitle} style={{ y: yVal }}>
+          <h1 className={`${styles.title} ${font.className}`}>HOOPERS</h1>
+          <Image className={styles.logoImage} src={Logo} alt="logo" />
+        </motion.div>
+      </div>
       <Image className={styles.ballImage} height={900} src={Ball} alt="Ball" />
-      <motion.div className={styles.homeTitle} style={{ y: yVal }}>
-        <h1 className={`${styles.title} ${font.className}`}>HOOPERS</h1>
-        <Image className={styles.logoImage} src={Logo} alt="logo" />
-      </motion.div>
     </div>
   );
 };
