@@ -2,10 +2,9 @@
 
 .homeImageWrapper {
   position: relative;
-  height: 100vh;
+  height: 130vh;
   width: 100%;
   background-color: black;
-
   .container {
     position: absolute;
     z-index: 200;
@@ -14,15 +13,10 @@
     width: 90vw;
     height: 100%;
     margin-left: -45vw;
-    margin-top: -50vh;
+    margin-top: -65vh;
     display: flex;
     align-items: center;
-
-    &:hover + .ballImage {
-      transform: translateX(65%) translateY(20%) rotate(30deg);
-      transition: all ease 1s;
-      filter: grayscale(0%);
-    }
+    justify-content: center;
   }
 }
 
@@ -33,26 +27,23 @@
   .logoImage {
     position: absolute;
     right: 35px;
-    bottom: 40px;
+    bottom: -10px;
   }
 }
 
-.ballImage {
+.ballWrapper {
   position: absolute;
   top: -250px;
   left: -300px;
   border-radius: 500px;
-  transition-property: all;
-  transition: all ease 1s;
-  filter: grayscale(100%);
 }
 
 .title {
-  font-size: 250px;
+  font-size: 200px;
   color: white;
   letter-spacing: 0.07em;
   text-shadow: 0px 4.49699px 4.49699px rgba(0, 0, 0, 0.25);
   z-index: 10;
   color: transparent;
-  -webkit-text-stroke: 4px white;
+  -webkit-text-stroke: 5px white;
 }

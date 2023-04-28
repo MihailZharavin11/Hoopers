@@ -1,4 +1,4 @@
-import Logo from "./header/logo.svg";
+import Logo from "./homeImage/logo.svg";
 import Lakers from "./gamesSection/Lakers.svg";
 import Brooklyn from "./gamesSection/Brooklyn.svg";
 import Celtics from "./gamesSection/Celtics.svg";

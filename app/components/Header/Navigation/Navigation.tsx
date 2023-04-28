@@ -8,7 +8,7 @@ import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import { Lato } from "next/font/google";
 
 const fontHeader = Lato({
-  weight: "400",
+  weight: "300",
   subsets: ["latin"],
 });
 
