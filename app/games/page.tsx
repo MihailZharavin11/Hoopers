@@ -1,13 +1,18 @@
-import React from "react";
-
+"use client";
+import React, { useEffect, useState } from "react";
+import styles from "./games.module.scss";
+import { teams } from "../components/home/TeamsSection/TeamBlock/TeamBlock";
+import TeamItem from "../components/home/TeamsSection/TeamItem/TeamItem";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Scrollbar } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import Image from "next/image";
+import { ArrowLeft, ArrowRight } from "../images";
 const Games = () => {
-  return (
-    <div className="w-full border-2 border-slate-950 h-72 text-center flex flex-row justify-center items-center">
-      <button className="text-zinc-500 py-2 px-2  bg-orange-400 block h-10 border-slate-900 border-2 rounded-lg">
-        Click me!
-      </button>
-    </div>
-  );
+  return <div></div>;
 };
 
 export default Games;

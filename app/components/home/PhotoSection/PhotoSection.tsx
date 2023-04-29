@@ -51,7 +51,7 @@ const PhotoSection = () => {
           y: isHover ? "28%" : "0%",
           rotate: isHover ? 30 : 0,
           scale: isHover ? 1.2 : 1,
-          filter: isHover ? "grayscale(0%)" : "grayscale(100%)",
+          filter: isHover ? "grayscale(5%)" : "grayscale(100%)",
         }}
         transition={{
           duration: 1,

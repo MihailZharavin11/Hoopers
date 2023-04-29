@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./teamBlock.module.scss";
 import {
   ChicagoLogo,
@@ -8,15 +8,21 @@ import {
   LakersLogo,
   MiamiLogo,
   GoldenStateLogo,
+  ArrowRight,
+  ArrowLeft,
 } from "@/app/images";
 import TeamItem from "../TeamItem/TeamItem";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Scrollbar } from "swiper";
+import Image from "next/image";
+import Arrow from "../Arrow/Arrow";
 
 export interface Team {
   description: string;
   logo: string;
 }
 
-const teams: Team[] = [
+export const teams: Team[] = [
   {
     description: `The Los Angeles Lakers are an American professional basketball team based in Los Angeles. 
     The Lakers compete in the National Basketball Association (NBA), as a member of the league's Western Conference Pacific Division. 
@@ -54,50 +60,52 @@ const teams: Team[] = [
     description: `The Boston Celtics are a National Basketball Association (NBA) team based in Boston, Massachusetts. 
     They play in the Atlantic Division of the Eastern Conference. Founded in 1946, the team is currently owned by Boston Basketball Partners LLC. 
     The Celtics play their home games at the TD Garden, which they share with the Nationl Hockey League's Boston Bruins. 
-    The franchise's seventeen championships are the most for any NBA franchise.`,
+    The franchise's seventeen championships are the most for any NBA franchise. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore a optio inventore deleniti accusamus quia eos, obcaecati, ex aliquid, ullam voluptatem temporibus eum facilis quibusdam illo modi doloribus impedit. Iste!
+    Sed dolor repellendus optio corporis libero odio exercitationem sint sunt, atque iure ex rerum similique repellat quibusdam suscipit incidunt? Praesentium mollitia fuga quibusdam aspernatur molestias, reprehenderit rem unde facere ut?
+    Eos, modi sit hic quas fugiat, sunt quasi natus velit rerum ipsam, id eum facilis aliquid laborum repellendus vel nihil exercitationem inventore eveniet ab quam doloremque nulla. Ea, dolor facilis.
+    Quas, consequuntur voluptas dicta ea expedita labore fugit quos, enim, omnis quaerat modi asperiores rerum unde eos dolor ipsum saepe vitae cumque consequatur eius. Labore fugiat consequatur at veritatis ipsam?
+    Neque doloremque quo, aliquam vel eos velit minima quos quibusdam doloribus? Facilis ratione eius unde sit perspiciatis? Quae eius ea repellat praesentium accusantium possimus blanditiis laborum incidunt pariatur ullam. Ab?
+    Magni veritatis illum incidunt facere laudantium, assumenda ipsa quisquam sit vero nemo rerum harum omnis totam possimus molestiae blanditiis vel exercitationem? Ut, dolor et! Sunt quibusdam officia nostrum temporibus velit!
+    Necessitatibus, et explicabo minus, dolorum impedit inventore pariatur assumenda sapiente recusandae ipsam aut! Nisi pariatur repellendus, fugiat nihil vitae facilis numquam nam, sunt nobis a, optio sint laborum inventore modi?
+    Labore dicta, recusandae fuga aperiam placeat animi repudiandae vero eligendi laudantium aspernatur deserunt. Aliquam rerum impedit tenetur deserunt deleniti ipsa saepe animi, magnam excepturi, provident ullam delectus culpa nemo voluptate.
+    Sed minima maxime mollitia nesciunt asperiores eveniet dolore sapiente, numquam obcaecati porro magni voluptates velit? Facere ex quos voluptas atque qui esse aspernatur et laboriosam, enim doloribus minus magni delectus!
+    Sapiente, at ipsum necessitatibus dolorem dolor cum ab velit. Reiciendis, esse quae sed excepturi optio rerum eius nesciunt, obcaecati temporibus non commodi, ab qui rem maxime. Placeat quidem sunt inventore. `,
     logo: CelticsLogo,
   },
 ];
 
 const TeamBlock = () => {
-  const [currentTeam, setCurrentTeam] = useState(0);
+  const [isLoaded, setLoaded] = useState(false);
+  const swipper = useSwiper();
 
-  const clickRightArrow = () => {
-    setCurrentTeam(currentTeam + 1);
-  };
-
-  const clickLeftArrow = () => {
-    setCurrentTeam(currentTeam - 1);
-  };
+  useEffect(() => {
+    setLoaded(true);
+  }, []);
 
   return (
-    <div className={styles.teamBlock}>
-      {/* render previous team */}
-
-      {currentTeam >= 1 && (
-        <div className={styles.previousTeam}>
-          <TeamItem logo={teams[currentTeam - 1].logo} />
+    <>
+      {isLoaded && (
+        <div className={styles.gamesWrapper}>
+          <Swiper
+            className={styles.swapper}
+            modules={[Scrollbar]}
+            slidesPerView={2.1}
+            effect="fade"
+            speed={500}
+            centeredSlides
+            scrollbar={{ draggable: true }}
+          >
+            <Arrow direction="left" />
+            {teams.map((team) => (
+              <SwiperSlide className={styles.box} key={team.description}>
+                <TeamItem logo={team.logo} description={team.description} />
+              </SwiperSlide>
+            ))}
+            <Arrow direction="right" />
+          </Swiper>
         </div>
       )}
-
-      {/* render current team */}
-
-      <TeamItem
-        logo={teams[currentTeam].logo}
-        description={teams[currentTeam].description}
-        currentTeam={currentTeam}
-        clickLeftArrow={clickLeftArrow}
-        clickRightArrow={clickRightArrow}
-        teams={teams}
-      />
-
-      {/* render next team */}
-      {currentTeam != teams.length - 1 && (
-        <div className={styles.nextTeam}>
-          <TeamItem logo={teams[currentTeam + 1].logo} />
-        </div>
-      )}
-    </div>
+    </>
   );
 };
 

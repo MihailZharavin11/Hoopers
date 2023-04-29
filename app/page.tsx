@@ -11,6 +11,7 @@ export default function Home() {
       <PhotoSection />
       <GameSection />
       <PlayersSection />
+
       <TeamsSection />
     </div>
   );
