@@ -69,7 +69,7 @@ const PlayersSection = () => {
         />
       </motion.div>
       <motion.div ref={ref} className="pointToShow"></motion.div>
-      <HomeButton />
+      <HomeButton title="View more" />
     </div>
   );
 };

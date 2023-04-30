@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import styles from "./teamItem.module.scss";
+import styles from "./teamScore.module.scss";
 import Image from "next/image";
 
 interface TeamItemProps {

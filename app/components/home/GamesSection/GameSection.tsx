@@ -4,7 +4,7 @@ import React from "react";
 import HomeTitle from "../HomeTitle/HomeTitle";
 import styles from "./gameSection.module.scss";
 import { ScoreTable } from "./ScoreTable/ScoreTable";
-import TeamItem from "./TeamItem/TeamItem";
+import TeamItem from "./TeamScore/TeamScore";
 import {
   Lakers,
   Miami,
@@ -117,7 +117,7 @@ const GameSection = () => {
           />
         </motion.div>
       </div>
-      <HomeButton />
+      <HomeButton title="View more" />
     </div>
   );
 };

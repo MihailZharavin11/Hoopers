@@ -14,7 +14,7 @@ const TeamsSection = () => {
       />
       <TeamBlock />
 
-      <HomeButton />
+      <HomeButton title="View all" />
     </div>
   );
 };
