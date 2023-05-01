@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import styles from "./teamsSection.module.scss";
-import HomeTitle from "../HomeTitle/HomeTitle";
+import HomeTitle from "../../Title/Title";
 import TeamBlock from "./TeamBlock/TeamBlock";
 import { HomeButton } from "../HomeButton/HomeButton";
 

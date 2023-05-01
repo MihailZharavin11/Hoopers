@@ -5,7 +5,7 @@ import styles from "./homeTitle.module.scss";
 
 interface HomeTitleProps {
   title: string;
-  text: string;
+  text?: string;
 }
 
 const fontTitle = Archivo({
@@ -18,15 +18,15 @@ const fontText = Lato({
   subsets: ["latin"],
 });
 
-const HomeTitle: React.FC<HomeTitleProps> = ({ title, text }) => {
+const Title: React.FC<HomeTitleProps> = ({ title, text }) => {
   return (
     <div className={styles.titleWrapper}>
       <h1 className={`${styles.title} ${fontTitle.className}`}>
         {title.toUpperCase()}
       </h1>
-      <p className={`${styles.text} ${fontText.className}`}>{text}</p>
+      {text && <p className={`${styles.text} ${fontText.className}`}>{text}</p>}
     </div>
   );
 };
 
-export default HomeTitle;
+export default Title;

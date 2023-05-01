@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import { HomeButton } from "../HomeButton/HomeButton";
-import HomeTitle from "../HomeTitle/HomeTitle";
+import HomeTitle from "../../Title/Title";
 import styles from "./playerSection.module.scss";
 import {
   IrvingItem,

@@ -1,7 +1,7 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import React from "react";
-import HomeTitle from "../HomeTitle/HomeTitle";
+import HomeTitle from "../../Title/Title";
 import styles from "./gameSection.module.scss";
 import { ScoreTable } from "./ScoreTable/ScoreTable";
 import TeamItem from "./TeamScore/TeamScore";

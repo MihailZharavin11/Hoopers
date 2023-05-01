@@ -11,8 +11,15 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import Image from "next/image";
 import { ArrowLeft, ArrowRight } from "../images";
+import Title from "../components/Title/Title";
 const Games = () => {
-  return <div></div>;
+  return (
+    <div className={styles.gamesWrapper}>
+      <div className={styles.gameTitle}>
+        <Title title="Games" />
+      </div>
+    </div>
+  );
 };
 
 export default Games;
